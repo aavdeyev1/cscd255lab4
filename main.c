@@ -2,6 +2,7 @@
 
 int main()
 {
+
   char customerCode;
   double usage, cost;
   int begMeterValue, endMeterValue;
@@ -15,12 +16,9 @@ int main()
 
   cost = determineCost(usage, customerCode);
 
-  /*printResults(cost, usage, customerCode, begMeterValue, endMeterValue);
-  */
-  //printf("%lf", cost);
-  //char coust = 'r';
-    //coust = (int) coust;
-    //printf("%d", coust);
+  printResults(cost, usage, customerCode, begMeterValue, endMeterValue);
+  
+
   return 0;   
 }// end main
 

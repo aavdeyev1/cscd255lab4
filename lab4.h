@@ -9,6 +9,7 @@ int readMeterValue(char * str);
 double determineUsage(int begMeterValue, int endMeterValue);
 char readCustomerCode();
 double determineCost(double usage, char customerCode);
+void printResults(double cost, double usage, char customerCode, int begMeterValue, int endMeterValue);
 //str is the "beginning" reading fist, then "ending" value,
 /* 444400003 and the ending reading was 444400135, then the customer
 used 13.2 gallons of water during the billing period.

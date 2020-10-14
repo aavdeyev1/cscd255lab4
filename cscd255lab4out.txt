@@ -1,0 +1,204 @@
+//following three cases model the rollover for all codes
+//should be $15.06
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 999999777
+Please enter the ending meter value 999
+Please enter customer's code r
+
+The customer's code is r
+The customer's reading at the beginning of the months was 999999777
+The customer's reading at the end of the month was 999
+The amount of water the customer used is 122.2 gallons
+The customer is being billed for $15.06
+
+
+//should be $1002
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 999999777
+Please enter the ending meter value 999999
+Please enter customer's code c
+
+The customer's code is c
+The customer's reading at the beginning of the months was 999999777
+The customer's reading at the end of the month was 999999
+The amount of water the customer used is 100022.2 gallons
+The customer is being billed for $1002.00
+
+
+
+// should be 1074
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 999999777
+Please enter the ending meter value 37000000
+Please enter customer's code i
+
+The customer's code is i
+The customer's reading at the beginning of the month was 999999777
+The customer's reading at the end of the month was 37000000
+The amount of water the customer used is 3700022.3 gallons
+The customer is being billed for $1074.00
+
+
+//following cases model 0 case for all codes
+
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 0
+Please enter the ending meter value 1
+Please enter customer's code r
+
+The customer's code is r
+The customer's reading at the beginning of the month was 0
+The customer's reading at the end of the month was 1
+The amount of water the customer used is 0.1 gallons
+The customer is being billed for $15.00
+
+
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 0
+Please enter the ending meter value 1
+Please enter customer's code c
+
+The customer's code is c
+The customer's reading at the beginning of the month was 0
+The customer's reading at the end of the month was 1
+The amount of water the customer used is 0.1 gallons
+The customer is being billed for $1000.00
+ 
+
+
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 0
+Please enter the ending meter value 1
+Please enter customer's code i
+
+The customer's code is i
+The customer's reading at the beginning of the month was 0
+The customer's reading at the end of the month was 1
+The amount of water the customer used is 0.1 gallons
+The customer is being billed for $1000.00
+ 
+
+
+//following cases model max inputs for all codes
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 0
+Please enter the ending meter value 0
+Please enter customer's code r
+
+The customer's code is r
+The customer's reading at the beginning of the month was 0
+The customer's reading at the end of the month was 0
+The amount of water the customer used is 100000000.0 gallons
+The customer is being billed for $50015.00
+ 
+
+
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 0
+Please enter the ending meter value 0
+Please enter customer's code c
+
+The customer's code is c
+The customer's reading at the beginning of the month was 0
+The customer's reading at the end of the month was 0
+The amount of water the customer used is 100000000.0 gallons
+The customer is being billed for $3000.00
+ 
+
+
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 0
+Please enter the ending meter value 0
+Please enter customer's code i
+
+The customer's code is i
+The customer's reading at the beginning of the month was 0
+The customer's reading at the end of the month was 0
+The amount of water the customer used is 100000000.0 gallons
+The customer is being billed for $252500.00
+ 
+
+
+
+//following cases model the usage-dependent industrial bill
+//does not exceed 4 mil
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 0
+Please enter the ending meter value 40000000
+Please enter customer's code i
+
+The customer's code is i
+The customer's reading at the beginning of the month was 0
+The customer's reading at the end of the month was 40000000
+The amount of water the customer used is 4000000.0 gallons
+The customer is being billed for $1080.00
+ 
+
+
+//exceed 4 mil by a little
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 0
+Please enter the ending meter value 40000001
+Please enter customer's code i
+
+The customer's code is i
+The customer's reading at the beginning of the month was 0
+The customer's reading at the end of the month was 40000001
+The amount of water the customer used is 4000000.1 gallons
+The customer is being billed for $2040.00
+ 
+
+//exceed 4 mil by a lot, not exceeding 10 mil
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 0
+Please enter the ending meter value 100000000
+Please enter customer's code i
+
+The customer's code is i
+The customer's reading at the beginning of the month was 0
+The customer's reading at the end of the month was 100000000
+The amount of water the customer used is 10000000.0 gallons
+The customer is being billed for $2100.00
+ 
+
+//exceed 10 mil by a little 
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 0
+Please enter the ending meter value 100000001
+Please enter customer's code i
+
+The customer's code is i
+The customer's reading at the beginning of the month was 0
+The customer's reading at the end of the month was 100000001
+The amount of water the customer used is 10000000.1 gallons
+The customer is being billed for $27500.00
+ 
+
+
+
+//sample run
+ clang-7 -pthread -lm -o main lab4.c main.c
+ ./main
+Please enter the beginning meter value 100
+Please enter the ending meter value 200
+Please enter customer's code r
+
+The customer's code is r
+The customer's reading at the beginning of the month was 100
+The customer's reading at the end of the month was 200
+The amount of water the customer used is 10.0 gallons
+The customer is being billed for $15.01
+ 

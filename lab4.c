@@ -63,9 +63,22 @@ double determineCost(double usage, char customerCode)
         case 114: cost = 15 + usage * .0005; //residential
             break;
 
-
-        default: printf("Invalid customer code");
+        default: 
+            printf("Invalid customer code\n");
+            exit(2);
     }
 
     return cost;
 }
+
+
+
+  void printResults(double cost, double usage, char customerCode, int begMeterValue, int endMeterValue)
+  {
+      printf("\nThe customer's code is %c\n", customerCode);
+      printf("The customer's reading at the beginning of the month was %d\n", begMeterValue);
+      printf("The customer's reading at the end of the month was %d\n", endMeterValue);
+      printf("The amount of water the customer used is %.1lf gallons\n", usage);
+      printf("The customer is being billed for $%.2lf\n", cost);
+
+  }
